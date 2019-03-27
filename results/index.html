@@ -1,0 +1,725 @@
+<html>
+<head>
+    <title>Java Concurrency Stress test report</title>
+    <style type="text/css">
+   * { font-family: Arial; }
+   table { font-size: 9pt; }
+   a { color: #000000; }
+   .progress { padding: 0px; }
+   .header { text-align: left; }
+   .section1 { font-size: 12pt; background-color: #BDB76B; color: #000000; font-weight: bold;}
+   .section2 { font-size: 12pt; background-color: #F0E68C; color: #000000; font-weight: bold;}
+   .cell1 { background-color: #FAFAD2; }
+   .cell2 { background-color: #EEE8AA; }
+   .passedProgress { background-color: #00AA00; color: #FFFFFF; text-align: center; font-weight: bold; }
+   .failedProgress { background-color: #FF0000; color: #FFFFFF; text-align: center; font-weight: bold; }
+   .passed { color: #00AA00; text-align: center; font-weight: bold; }
+   .failed { color: #FF0000; text-align: center; font-weight: bold; }
+   .interesting { color: #0000FF; text-align: center; font-weight: bold; }
+   .spec { color: #AAAA00; text-align: center; font-weight: bold; }
+   .endResult { font-size: 48pt; text-align: center; font-weight: bold; }
+
+
+
+    </style>
+</head>
+<body>
+<table width="100%" cellspacing="20">
+    <tr>
+        <td>
+            <p class="endResult passed">
+                100%
+            </p>
+            <table width="100%" cellpadding="3" cellspacing="0">
+                <tr>
+                    <td width="100%" class="passedProgress">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td nowrap><b>Overall pass rate:</b> 50/50&nbsp;</td>
+                </tr>
+            </table>
+            <br>
+        </td>
+        <td width=100>
+            <table>
+                <tr>
+                    <td nowrap>java.specification.name</td>
+                    <td nowrap>Java Platform API Specification</td>
+                </tr>
+                <tr>
+                    <td nowrap>java.specification.vendor</td>
+                    <td nowrap>Oracle Corporation</td>
+                </tr>
+                <tr>
+                    <td nowrap>java.specification.version</td>
+                    <td nowrap>11</td>
+                </tr>
+                <tr>
+                    <td nowrap>java.vendor</td>
+                    <td nowrap>Oracle Corporation</td>
+                </tr>
+                <tr>
+                    <td nowrap>java.version</td>
+                    <td nowrap>11.0.1</td>
+                </tr>
+                <tr>
+                    <td nowrap>java.vm.name</td>
+                    <td nowrap>OpenJDK 64-Bit Server VM</td>
+                </tr>
+                <tr>
+                    <td nowrap>java.vm.vendor</td>
+                    <td nowrap>Oracle Corporation</td>
+                </tr>
+                <tr>
+                    <td nowrap>java.vm.version</td>
+                    <td nowrap>11.0.1+13</td>
+                </tr>
+                <tr>
+                    <td nowrap>os.arch</td>
+                    <td nowrap>x86_64</td>
+                </tr>
+                <tr>
+                    <td nowrap>os.name</td>
+                    <td nowrap>Mac OS X</td>
+                </tr>
+                <tr>
+                    <td nowrap>os.version</td>
+                    <td nowrap>10.12.6</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<hr>
+<h3>FAILED tests</h3>
+<p>Strong asserts were violated. Correct implementations should have no assert failures here.</p>
+<table cellspacing=0 cellpadding=3 width="100%">
+</table>
+None!
+<br>
+<br>
+<hr>
+<h3>ERROR tests</h3>
+<p>Tests break for some reason, other than failing the assert. Correct implementations should have none.</p>
+<table cellspacing=0 cellpadding=3 width="100%">
+</table>
+None!
+<br>
+<br>
+<hr>
+<h3>INTERESTING tests</h3>
+<p>Some interesting behaviors observed. This is for the plain curiosity.</p>
+<table cellspacing=0 cellpadding=3 width="100%">
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="com.jcst.AtomicityTest.PlainIncrement.html">com.jcst.AtomicityTest.PlainIncrement</a></td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="com.jcst.AtomicityTest.PlainTransfer.html">com.jcst.AtomicityTest.PlainTransfer</a></td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.AtomicityTest.VolatileIncrement.html">com.jcst.AtomicityTest.VolatileIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.OrderingTest.PlainOrdering.html">com.jcst.OrderingTest.PlainOrdering</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.VisibilityTest.PlainReadWrite.html">com.jcst.VisibilityTest.PlainReadWrite</a>
+        </td>
+        <td>10<sup>4</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_01_Simple.html">org.openjdk.jcstress.samples.APISample_01_Simple</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_02_Arbiters.html">org.openjdk.jcstress.samples.APISample_02_Arbiters</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_03_Termination.html">org.openjdk.jcstress.samples.APISample_03_Termination</a>
+        </td>
+        <td>10<sup>4</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_04_Nesting.PlainTest.html">org.openjdk.jcstress.samples.APISample_04_Nesting.PlainTest</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_04_Nesting.VolatileTest.html">org.openjdk.jcstress.samples.APISample_04_Nesting.VolatileTest</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_05_SharedMetadata.PlainTest.html">org.openjdk.jcstress.samples.APISample_05_SharedMetadata.PlainTest</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_05_SharedMetadata.VolatileTest.html">org.openjdk.jcstress.samples.APISample_05_SharedMetadata.VolatileTest</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_06_Descriptions.html">org.openjdk.jcstress.samples.APISample_06_Descriptions</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.PlainIncrement.html">org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.PlainIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.VolatileIncrement.html">org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.VolatileIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_02_ConcurrentHashMap.BrokenMultimap.html">org.openjdk.jcstress.samples.ConcurrencySample_02_ConcurrentHashMap.BrokenMultimap</a>
+        </td>
+        <td>10<sup>7</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.ByteBuffers.html">org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.ByteBuffers</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.UnsafeCrossCacheLine.html">org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.UnsafeCrossCacheLine</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_02_WordTearing.BitSets.html">org.openjdk.jcstress.samples.JMMSample_02_WordTearing.BitSets</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_03_Coherence.SameRead.html">org.openjdk.jcstress.samples.JMMSample_03_Coherence.SameRead</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.PlainReads.html">org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.PlainReads</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.AcqRelDekker.html">org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.AcqRelDekker</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.PlainDekker.html">org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.PlainDekker</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_06_Finals.PlainInit.html">org.openjdk.jcstress.samples.JMMSample_06_Finals.PlainInit</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+</table>
+<br>
+<hr>
+<h3>All tests</h3>
+<p></p>
+<table cellspacing=0 cellpadding=3 width="100%">
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.AtomicityTest.AtomicIntegerIncrement.html">com.jcst.AtomicityTest.AtomicIntegerIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.AtomicityTest.IntegerAtomicity.html">com.jcst.AtomicityTest.IntegerAtomicity</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.AtomicityTest.IntegerConcurrentAtomicity.html">com.jcst.AtomicityTest.IntegerConcurrentAtomicity</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="com.jcst.AtomicityTest.LongAtomicity.html">com.jcst.AtomicityTest.LongAtomicity</a></td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="com.jcst.AtomicityTest.PlainIncrement.html">com.jcst.AtomicityTest.PlainIncrement</a></td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="com.jcst.AtomicityTest.PlainTransfer.html">com.jcst.AtomicityTest.PlainTransfer</a></td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.AtomicityTest.SynchronizedIncrement.html">com.jcst.AtomicityTest.SynchronizedIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.AtomicityTest.SynchronizedTransfer.html">com.jcst.AtomicityTest.SynchronizedTransfer</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.AtomicityTest.VolatileIncrement.html">com.jcst.AtomicityTest.VolatileIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.AtomicityTest.VolatileLongAtomicity.html">com.jcst.AtomicityTest.VolatileLongAtomicity</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.OrderingTest.PlainOrdering.html">com.jcst.OrderingTest.PlainOrdering</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.OrderingTest.SynchronizedOrdering.html">com.jcst.OrderingTest.SynchronizedOrdering</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.OrderingTest.VolatileOrdering.html">com.jcst.OrderingTest.VolatileOrdering</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.VisibilityTest.PlainReadWrite.html">com.jcst.VisibilityTest.PlainReadWrite</a>
+        </td>
+        <td>10<sup>4</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.VisibilityTest.SynchronizedReadWrite.html">com.jcst.VisibilityTest.SynchronizedReadWrite</a>
+        </td>
+        <td>10<sup>4</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="com.jcst.VisibilityTest.VolatileReadWrite.html">com.jcst.VisibilityTest.VolatileReadWrite</a>
+        </td>
+        <td>10<sup>4</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_01_Simple.html">org.openjdk.jcstress.samples.APISample_01_Simple</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_02_Arbiters.html">org.openjdk.jcstress.samples.APISample_02_Arbiters</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_03_Termination.html">org.openjdk.jcstress.samples.APISample_03_Termination</a>
+        </td>
+        <td>10<sup>4</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_04_Nesting.PlainTest.html">org.openjdk.jcstress.samples.APISample_04_Nesting.PlainTest</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_04_Nesting.VolatileTest.html">org.openjdk.jcstress.samples.APISample_04_Nesting.VolatileTest</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_05_SharedMetadata.PlainTest.html">org.openjdk.jcstress.samples.APISample_05_SharedMetadata.PlainTest</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_05_SharedMetadata.VolatileTest.html">org.openjdk.jcstress.samples.APISample_05_SharedMetadata.VolatileTest</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.APISample_06_Descriptions.html">org.openjdk.jcstress.samples.APISample_06_Descriptions</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.AtomicIncrement.html">org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.AtomicIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.PlainIncrement.html">org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.PlainIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.VolatileIncrement.html">org.openjdk.jcstress.samples.ConcurrencySample_01_OperationAtomicity.VolatileIncrement</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_02_ConcurrentHashMap.BrokenMultimap.html">org.openjdk.jcstress.samples.ConcurrencySample_02_ConcurrentHashMap.BrokenMultimap</a>
+        </td>
+        <td>10<sup>7</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_02_ConcurrentHashMap.CorrectJDK8Multimap.html">org.openjdk.jcstress.samples.ConcurrencySample_02_ConcurrentHashMap.CorrectJDK8Multimap</a>
+        </td>
+        <td>10<sup>7</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.ConcurrencySample_02_ConcurrentHashMap.CorrectMultimap.html">org.openjdk.jcstress.samples.ConcurrencySample_02_ConcurrentHashMap.CorrectMultimap</a>
+        </td>
+        <td>10<sup>7</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.ByteBuffers.html">org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.ByteBuffers</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.Integers.html">org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.Integers</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.Longs.html">org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.Longs</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.OpaqueLongs.html">org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.OpaqueLongs</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a
+                href="org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.UnsafeCrossCacheLine.html">org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.UnsafeCrossCacheLine</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.VolatileLongs.html">org.openjdk.jcstress.samples.JMMSample_01_AccessAtomicity.VolatileLongs</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_02_WordTearing.BitSets.html">org.openjdk.jcstress.samples.JMMSample_02_WordTearing.BitSets</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_02_WordTearing.JavaArrays.html">org.openjdk.jcstress.samples.JMMSample_02_WordTearing.JavaArrays</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_03_Coherence.SameOpaqueRead.html">org.openjdk.jcstress.samples.JMMSample_03_Coherence.SameOpaqueRead</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_03_Coherence.SameRead.html">org.openjdk.jcstress.samples.JMMSample_03_Coherence.SameRead</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_03_Coherence.SameVolatileRead.html">org.openjdk.jcstress.samples.JMMSample_03_Coherence.SameVolatileRead</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.AcquireReleaseGuard.html">org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.AcquireReleaseGuard</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.LockGuard.html">org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.LockGuard</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.PlainReads.html">org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.PlainReads</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.VolatileGuard.html">org.openjdk.jcstress.samples.JMMSample_04_PartialOrder.VolatileGuard</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.AcqRelDekker.html">org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.AcqRelDekker</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.PlainDekker.html">org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.PlainDekker</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.VolatileDekker.html">org.openjdk.jcstress.samples.JMMSample_05_TotalOrder.VolatileDekker</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell2">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_06_Finals.FinalInit.html">org.openjdk.jcstress.samples.JMMSample_06_Finals.FinalInit</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting"></td>
+        <td class="passed"></td>
+    </tr>
+    <tr class="cell1">
+        <td>&nbsp;&nbsp;&nbsp;<a href="org.openjdk.jcstress.samples.JMMSample_06_Finals.PlainInit.html">org.openjdk.jcstress.samples.JMMSample_06_Finals.PlainInit</a>
+        </td>
+        <td>10<sup>8</sup></td>
+        <td class="passed">PASSED</td>
+        <td class="interesting">INTERESTING</td>
+        <td class="passed"></td>
+    </tr>
+</table>
+<br>
+</body>
+</html>
